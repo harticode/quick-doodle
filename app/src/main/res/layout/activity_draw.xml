@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.quickdoodle.challengelearn.quickdoodle.draw"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/chrono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="#68ff7700"
+        android:padding="12dp"
+        android:text="00:15 sec"
+        style="@style/RtlOverlay.Widget.AppCompat.SearchView.MagIcon"
+        android:shape = "ring"
+        />
+
+    <Button
+        android:id="@+id/start"
+        style="@style/RtlOverlay.Widget.AppCompat.SearchView.MagIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:background="@drawable/draw"
+        android:padding="12dp"
+        android:shape="ring" />
+
+    <Button
+        android:id="@+id/renewdraw"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBaseline="@+id/chrono"
+        android:layout_alignBottom="@+id/chrono"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp"
+        android:background="@drawable/restart"
+        android:padding="12dp"
+        android:shape="ring" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/chrono"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical">
+
+
+        <com.quickdoodle.challengelearn.quickdoodle.CanvasView
+            android:id="@+id/drawP"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_alignParentStart="true"
+            android:background="#f0eef0"
+            android:padding="6dp" />
+
+        <ImageView
+            android:id="@+id/hide"
+            android:layout_width="wrap_content"
+            android:layout_height="380dp"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/hide" />
+
+        <TextView
+            android:id="@+id/clickstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="39dp"
+            android:fontFamily="serif"
+            android:shadowColor="@color/colorPrimary"
+            android:text="Click the Pencil to Doodle"
+            android:textColor="#bf5963ef"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drawP"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/drawing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="22dp"
+                android:layout_weight="4"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="draw a Cat"
+                android:textColor="#bf5963ef"
+                android:textSize="26sp" />
+
+            <ImageView
+                android:id="@+id/imageDy"
+                android:layout_width="102dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="22dp"
+                android:background="@drawable/img7"
+                android:cropToPadding="true"
+                android:padding="0.2dp"
+                android:scaleX="0.8"
+                android:scaleY="0.8" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
